@@ -67,6 +67,9 @@ define( 'NONCE_SALT',       'Hx>9{1Ls]#:??Nt@Tc[c)0l( _DE&[N53r<%uLM3@@qEFF.d*@>
  */
 $table_prefix = 'wp_';
 
+ini_set('log_errors','on');
+
+ini_set('display_errors','off');
 /**
  * For developers: WordPress debugging mode.
  *
