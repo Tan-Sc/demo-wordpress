@@ -25,6 +25,7 @@ wp-config.php
 /wp-content/themes/xxx/node_modules
 /wp-content/themes/xxx/css/styles.min.css
 /wp-content/themes/xxx/css/styles.min.css.map
+/wp-content/themes/xxx/css/css-all.min.css
 # Example plugin
 /wp-content/plugins/hello.php
 
