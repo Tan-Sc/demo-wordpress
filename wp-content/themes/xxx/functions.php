@@ -52,3 +52,13 @@ if (!function_exists('scripts')) {
 
     add_action('wp_enqueue_scripts', 'scripts');
 }
+
+function enqueue_slick_scripts() {
+    // Enqueue Slick styles
+    wp_enqueue_style('slick-css', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
+
+    // Enqueue Slick script and its dependency (jQuery)
+    wp_enqueue_script('jquery');
+    wp_enqueue_script('slick-js', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'));
+}
+add_action('wp_enqueue_scripts', 'enqueue_slick_scripts');
