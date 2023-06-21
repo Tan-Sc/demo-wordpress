@@ -10,4 +10,4 @@
   <h1>Home page</h1>
 </main>
 
-<?php get_footer(); ?>
+<?php get_footer(); ?> 
