@@ -14,7 +14,7 @@
 
 <footer>
   <div class="bg-[#02336b] pt-14 pb-5 text-white">
-    <div class="container grid grid-cols-1 md:grid-cols-2  gap-12 lg:grid-cols-3">
+    <div class="block-content grid grid-cols-1 md:grid-cols-2  gap-12 lg:grid-cols-3">
       <div>
         <div class="uppercase text-[15px] mb-8">
           TRUNG TÂM KIỂM ĐỊNH KỸ THUẬT AN TOÀN KHU VỰC I
@@ -101,7 +101,7 @@
     </div>
   </div>
   <div class="bg-[#022146]">
-    <div class="container">
+    <div class="block-content">
       <span class="text-white flex items-center py-2 text-[14px] leading-4">
         Copyright &copy; 2022. All rights reserved.
       </span>
