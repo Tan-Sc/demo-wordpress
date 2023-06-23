@@ -32,4 +32,10 @@ function industries_page()
 		'id'	=> 'img',
         'type'  => 'file',
 	));
+
+	$cmb->add_group_field($group, array(
+		'name'	=> 'HyperLink',
+		'id'	=> 'link',
+        'type'  => 'text',
+	));
 }
