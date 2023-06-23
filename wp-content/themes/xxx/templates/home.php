@@ -15,6 +15,7 @@ function add_body_class($classes)
 
 <?php
 include 'carousel.php';
+include 'logo-carousel.php';
 
 global $post;
 $post_id    = $post->ID;
@@ -37,5 +38,10 @@ $industries = get_post_meta($post_id, 'group_industries', true);
     </div>
   </div>
 </section>
+
+<section class="carousel">
+  <?php echo get_section_logo_carousel(); ?>
+</section>
+
 <?php
 get_footer();
