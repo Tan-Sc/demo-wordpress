@@ -1,27 +1,59 @@
-// Menu
-body {
-  font-family: "Open Sans", sans-serif;
-}
-.nav-bar-menu {
-  background: #04448d;
-  .menu {
-    display: block;
-    ul {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
+.home {
+  &__banner-content {
+    background: #ededed
+      url(http://kiemdinh1.vn/wp-content/uploads/2018/04/grid-dark-1.png?id=525);
+    &--container {
+      height: 250px;
+      background: url(https://kiemdinh1.vn/wp-content/uploads/2018/03/b.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
 
-      li {
-        padding: 8px 16px;
-        a {
-          color: white;
-          text-transform: uppercase;
-        }
+  &__banner-content-2 {
+    background: #ededed
+      url(http://kiemdinh1.vn/wp-content/uploads/2018/04/grid-dark-1.png?id=525);
+    &--container {
+      height: 250px;
+      background: url(https://kiemdinh1.vn/wp-content/uploads/2018/03/Untitled-1.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+  // new
+  &__news {
+  }
+
+  // service
+  &__service {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      input,
+      textarea {
+        font-size: 12px;
+        line-height: 21px;
+        color: #444;
+        border: 1px solid #e1e1e1;
+        width: 100%;
+        max-width: 100%;
+        padding: 4px 12px;
+        outline: none;
       }
-      li.current_page_item {
-        border-bottom: 3px solid #49b2ed;
-      }
+    }
+  }
+
+  &__link-carousel {
+    .slick-track {
+      display: flex;
+      gap: 40px;
     }
   }
 }

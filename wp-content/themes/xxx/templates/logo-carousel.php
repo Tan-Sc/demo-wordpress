@@ -8,11 +8,13 @@ function get_section_logo_carousel()
 ?>
   <section class="logo-carousel-section">
     <div class="block-content">
+      <h2 class="font-bold text-2xl uppercase text-center my-9 text-[#1e73be]">LIÊN KẾT WEBSITE</h2>
       <div class="logo-carousel">
         <?php
         foreach ($array_logo as $value) {
         ?>
-          <a href="<?php echo $value['link']; ?>" class="img" style="background-image: url(<?php echo $value['img']; ?>); height: 500px; background-size: cover; background-repeat: no-repeat; background-position: center center;">
+          <a href="<?php echo $value['link']; ?>">
+            <img src=<?php echo $value['img']; ?> alt="link">
           </a>
         <?php
         }
