@@ -26,4 +26,10 @@ function logo_carousel()
 		'id'	=> 'img',
         'type'  => 'file',
 	));
+
+    $cmb->add_group_field($group, array(
+		'name'	=> 'Hyperlink',
+		'id'	=> 'link',
+        'type'  => 'text',
+	));
 }
