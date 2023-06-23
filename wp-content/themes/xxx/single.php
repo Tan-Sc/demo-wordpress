@@ -7,9 +7,13 @@
   ?>
 </div>
 
-
 <main>
-  <h1 class="text-black text-3xl">Blog page</h1>
+
+<div class="block-content">
+
+  <?php echo the_content(); ?>
+</div >
+
 </main>
 
 <?php get_footer(); ?>
