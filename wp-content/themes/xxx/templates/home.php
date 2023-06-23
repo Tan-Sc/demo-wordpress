@@ -25,7 +25,7 @@ $industries = get_post_meta($post_id, 'group_industries', true);
 <section class="carousel">
   <?php echo get_section_carousel(); ?>
 </section>
-<section class="content-section">
+<section class="content-section mb-10">
   <div class="block-content ">
     <div class="font-bold text-2xl uppercase text-center my-9 text-[#1e73be]">Lĩnh Vực Hoạt Động</div>
     <div class="row grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">

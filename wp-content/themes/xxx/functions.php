@@ -35,9 +35,8 @@ if (!function_exists('styles')) {
     function styles()
     {
         // wp_enqueue_style('tailwind', THEME_URI . '/resources/css/theme.css');
-        wp_enqueue_style( 'tailwindcss', get_template_directory_uri() . '/css/tailwind.prod.css', array(), filemtime(get_template_directory() .'/css/tailwind.prod.css'), 'all');
+        wp_enqueue_style('tailwindcss', get_template_directory_uri() . '/css/tailwind.prod.css', array(), filemtime(get_template_directory() . '/css/tailwind.prod.css'), 'all');
         wp_enqueue_style('main-style', THEME_URI . '/css/css-all.min.css');
-
     }
 
     add_action('wp_enqueue_scripts', 'styles');
@@ -53,7 +52,8 @@ if (!function_exists('scripts')) {
     add_action('wp_enqueue_scripts', 'scripts');
 }
 
-function enqueue_slick_scripts() {
+function enqueue_slick_scripts()
+{
     // Enqueue Slick styles
     wp_enqueue_style('slick-css', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
 

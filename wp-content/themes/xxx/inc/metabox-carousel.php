@@ -21,9 +21,9 @@ function img_carousel()
 		)
 	));
 
-    $cmb->add_group_field($group, array(
+	$cmb->add_group_field($group, array(
 		'name'	=> 'Image',
 		'id'	=> 'img',
-        'type'  => 'file',
+		'type'  => 'file',
 	));
 }

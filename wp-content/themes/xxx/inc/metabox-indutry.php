@@ -27,15 +27,15 @@ function industries_page()
 		'type'	=> 'text'
 	));
 
-    $cmb->add_group_field($group, array(
+	$cmb->add_group_field($group, array(
 		'name'	=> 'Image',
 		'id'	=> 'img',
-        'type'  => 'file',
+		'type'  => 'file',
 	));
 
 	$cmb->add_group_field($group, array(
 		'name'	=> 'HyperLink',
 		'id'	=> 'link',
-        'type'  => 'text',
+		'type'  => 'text',
 	));
 }

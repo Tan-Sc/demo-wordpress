@@ -7,13 +7,13 @@ function get_section_logo_carousel()
 
 ?>
   <section class="logo-carousel-section">
-    <div class="">
+    <div class="block-content">
       <div class="logo-carousel">
         <?php
         foreach ($array_logo as $value) {
         ?>
-          <div class="img" style="background-image: url(<?php echo $value['img']; ?>); height: 500px; background-size: cover; background-repeat: no-repeat; background-position: center center;">
-          </div>
+          <a href="<?php echo $value['link']; ?>" class="img" style="background-image: url(<?php echo $value['img']; ?>); height: 500px; background-size: cover; background-repeat: no-repeat; background-position: center center;">
+          </a>
         <?php
         }
         ?>
@@ -30,6 +30,7 @@ function get_section_logo_carousel()
         infinite: true,
         slidesPerRow: 1,
         arrows: true,
+        slidesToShow: 3
       });
     });
   </script>

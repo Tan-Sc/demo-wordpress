@@ -1,0 +1,27 @@
+// Menu
+body {
+  font-family: "Open Sans", sans-serif;
+}
+.nav-bar-menu {
+  background: #04448d;
+  .menu {
+    display: block;
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      li {
+        padding: 8px 16px;
+        a {
+          color: white;
+          text-transform: uppercase;
+        }
+      }
+      li.current_page_item {
+        border-bottom: 3px solid #49b2ed;
+      }
+    }
+  }
+}
