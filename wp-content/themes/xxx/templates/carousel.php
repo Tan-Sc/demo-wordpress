@@ -29,8 +29,7 @@ function get_section_carousel()
         autoplaySpeed: 2000,
         infinite: true,
         slidesPerRow: 1,
-        prevArrow: '<button class="slide-arrow prev-arrow"></button>',
-        nextArrow: '<button class="slide-arrow next-arrow"></button>'
+        arrows: true,
       });
     });
   </script>
