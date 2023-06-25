@@ -6,7 +6,7 @@
     yoast_breadcrumb('<div id="breadcrumbs">', '</div>');
   }
   ?>
-  <div id="primary" class="content-area">
+  <div id="primary" class="content">
     <main id="main" class="site-main">
 
       <?php
@@ -43,12 +43,39 @@
                 </a>
               </li>
             </ul>
-          </div><!-- .social-sharing -->
+          </div>
         </article><!-- #post-<?php the_ID(); ?> -->
 
       <?php endwhile; ?>
-
     </main>
+  </div>
+
+  <div id="second" class="block-content">
+    <?php
+    // Query for recent blog posts
+    $args = array(
+      'post_type'      => 'post',
+      'posts_per_page' => 5,
+    );
+    $query = new WP_Query($args);
+
+    if ($query->have_posts()) :
+      while ($query->have_posts()) :
+        $query->the_post();
+    ?>
+
+        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+          <header class="entry-header">
+            <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+          </header>
+        </article><?php the_ID(); ?>
+      <?php
+      endwhile;
+      wp_reset_postdata();
+    else :
+      ?>
+      <p><?php _e('No Recent posts.'); ?></p>
+    <?php endif; ?>
   </div>
 </div>
 <?php get_footer(); ?>

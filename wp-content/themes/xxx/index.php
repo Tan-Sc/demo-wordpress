@@ -8,7 +8,7 @@
     }
     ?>
   </div>
-  <main id="main" class="site-main">
+  <main class="site-main">
     <?php
     // Get the current category
     $current_category = get_queried_object();
@@ -54,6 +54,37 @@
     <?php endif; ?>
 
   </main>
-</div>
 
-<?php get_footer(); ?>
+  <div class="content">
+    <?php
+    $current_category = get_queried_object();
+    $category_title = single_cat_title('', false);
+    $args = array(
+      'post_type'      => 'post',
+      'category_name'  => $current_category->slug,
+      'posts_per_page' => 5,
+    );
+    $query = new WP_Query($args);
+
+    if ($query->have_posts()) :
+      while ($query->have_posts()) :
+        $query->the_post();
+    ?>
+
+        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+          <header class="entry-header">
+            <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+          </header><!-- .entry-header -->
+        </article>
+      <?php
+      endwhile;
+      wp_reset_postdata();
+    else :
+      ?>
+      <p><?php _e('No posts found.'); ?></p>
+    <?php endif; ?>
+
+    </main>
+  </div>
+
+  <?php get_footer(); ?>
