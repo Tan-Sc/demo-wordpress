@@ -48,9 +48,14 @@ $industries = get_post_meta($post_id, 'group_industries', true);
       <div class="block-content home__banner-content-2--container"></div>
     </section>
     <section class="home__news ">
-      <div class="block-content mt-8 mb-8 border-b-[1px] pb-8 border-[#ccc]">
-        <div class="border-solid border-b-2 border-[#49b2ed]">
-          <span class="bg-[#49b2ed] text-white px-3 pt-2 pb-1 uppercase">Tin tức - sự kiện</span>
+      <div class="block-content">
+        <div class=" mt-8 mb-8 border-b-[1px] pb-8 border-[#ccc]">
+          <div class="border-solid border-b-2 border-[#49b2ed]">
+            <span class="bg-[#49b2ed] text-white px-3 pt-2 pb-1 uppercase">Tin tức - sự kiện</span>
+          </div>
+          <div>
+            hihi
+          </div>
         </div>
       </div>
     </section>
