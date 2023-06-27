@@ -97,8 +97,6 @@
           <p><?php _e('No posts found.'); ?></p>
         <?php endif; ?>
       </div>
-
-      </main>
     </div>
   </div>
 </div>

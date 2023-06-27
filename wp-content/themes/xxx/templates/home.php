@@ -54,7 +54,35 @@ $industries = get_post_meta($post_id, 'group_industries', true);
             <span class="bg-[#49b2ed] text-white px-3 pt-2 pb-1 uppercase">Tin tức - sự kiện</span>
           </div>
           <div>
-            hihi
+            <?php
+            $args = array(
+              'post_type'      => 'post',
+              'posts_per_page' => 5,
+            );
+            $query = new WP_Query($args);
+            ?>
+            <div class="flex flex-col list-content">
+              <?php
+              if ($query->have_posts()) :
+                while ($query->have_posts()) :
+                  $query->the_post();
+              ?>
+                  <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                    <header class="entry-header">
+                      <div class="featured-image">
+                        <?php the_post_thumbnail('small'); ?>
+                      </div>
+                      <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                    </header><!-- .entry-header -->
+                  </article>
+                <?php
+                endwhile;
+                wp_reset_postdata();
+              else :
+                ?>
+                <p><?php _e('No posts found.'); ?></p>
+              <?php endif; ?>
+            </div>
           </div>
         </div>
       </div>
