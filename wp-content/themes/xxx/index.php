@@ -43,8 +43,6 @@
                     <?php the_post_thumbnail('medium'); ?>
                   </div>
                 <?php endif; ?>
-                <img src="" alt="test" class="bg-slate-500 h-[160px]" />
-
                 <div class="entry-content">
                   <?php the_excerpt(); ?>
                   <a href="<?php the_permalink(); ?>" class="read-more">Read More</a>
