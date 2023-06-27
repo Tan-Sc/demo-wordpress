@@ -24,6 +24,14 @@
   }
   // new
   &__news {
+    .list-content {
+      .featured-image {
+        img {
+          height: 180px;
+          width: 100%;
+        }
+      }
+    }
   }
 
   // service
@@ -54,6 +62,11 @@
     .slick-track {
       display: flex;
       gap: 40px;
+
+      a {
+        display: flex !important;
+        justify-content: center;
+      }
     }
   }
 }

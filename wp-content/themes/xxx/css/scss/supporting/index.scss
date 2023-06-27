@@ -1,3 +1,14 @@
+body {
+  color: black;
+}
+
+#breadcrumbs {
+  font-size: 12px;
+  color: #c3c3c3;
+  line-height: 18px;
+  cursor: pointer;
+  padding-top: 20px;
+}
 .site-main {
   .list-categories {
     .entry-content {
@@ -12,6 +23,12 @@
         font-size: 14px;
       }
     }
+    .featured-image {
+      img {
+        width: 100%;
+        height: 160px;
+      }
+    }
   }
   .post-content {
     h1.entry-title {
@@ -20,6 +37,12 @@
       word-wrap: break-word;
       font-size: 41px;
       line-height: 50px;
+    }
+    .featured-image {
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 }

@@ -10,7 +10,7 @@
   </div>
   <?php
   $category_title = single_cat_title('', false); // Get the category title
-  echo '<h1 class="page-title text-center uppercase text-2xl font-bold mt-10">' . $category_title . '</h1>';
+  echo '<h1 class="page-title text-center uppercase text-2xl font-bold mt-5">' . $category_title . '</h1>';
   ?>
   <div class="md:grid md:grid-cols-[69%,30%] block gap-10 pt-10 pb-16">
     <main class="site-main">
@@ -84,7 +84,7 @@
 
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
               <header class="entry-header">
-                <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                <h2 class="entry-title uppercase"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
               </header><!-- .entry-header -->
             </article>
           <?php

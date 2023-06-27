@@ -14,7 +14,7 @@ function get_section_logo_carousel()
         foreach ($array_logo as $value) {
         ?>
           <a href="<?php echo $value['link']; ?>">
-            <img src=<?php echo $value['img']; ?> alt="link">
+            <img src=<?php echo $value['img']; ?> alt="link" />
           </a>
         <?php
         }

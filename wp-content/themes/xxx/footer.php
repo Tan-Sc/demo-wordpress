@@ -1,15 +1,15 @@
 <?php
-  $menuItems = [
-      'Trang Chủ' => 'index.php',
-      'Giới thiệu' => 'about.php',
-      'Lĩnh Vực Hoạt Động' => 'services.php',
-      'Tin tức' => 'contact.php',
-      'Tuyển dụng' => 'contact.php',
-      'Liên hệ' => 'contact.php'
-  ];
-  $menuHTML = array_map(function ($title, $url) {
-      return "<li><a href='$url' class='text-white text-[14px] leading-4 hover:text-[#676e6f]'>$title</a></li>";
-  }, array_keys($menuItems), $menuItems);
+$menuItems = [
+  'Trang Chủ' => 'index.php',
+  'Giới thiệu' => 'about.php',
+  'Lĩnh Vực Hoạt Động' => 'services.php',
+  'Tin tức' => 'contact.php',
+  'Tuyển dụng' => 'contact.php',
+  'Liên hệ' => 'contact.php'
+];
+$menuHTML = array_map(function ($title, $url) {
+  return "<li><a href='$url' class='text-white text-[14px] leading-4 hover:text-[#676e6f]'>$title</a></li>";
+}, array_keys($menuItems), $menuItems);
 ?>
 
 <footer>

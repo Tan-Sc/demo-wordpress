@@ -21,7 +21,13 @@ global $post;
 $post_id    = $post->ID;
 $industries = get_post_meta($post_id, 'group_industries', true);
 
+$args = array(
+  'post_type'      => 'post',
+  'posts_per_page' => 6,
+);
+$query = new WP_Query($args);
 ?>
+
 
 <body>
   <main class="home">
@@ -34,10 +40,10 @@ $industries = get_post_meta($post_id, 'group_industries', true);
     <section class="content-section mb-10">
       <div class="block-content ">
         <h2 class="font-bold text-2xl uppercase text-center my-9 text-[#1e73be]">Lĩnh Vực Hoạt Động</h2>
-        <div class="row grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="row grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 justify-center">
           <?php foreach ($industries as $item) : ?>
-            <a href=<?php echo $item['link']; ?> class="flex flex-col items-center gap-10 max-w-[400px]">
-              <img class="img" src=<?php echo $item['img']; ?>>
+            <a href=<?php echo $item['link']; ?> class="flex flex-col items-center gap-10">
+              <img class="img max-w-[400px] w-full" src=<?php echo $item['img']; ?>>
               <div class="title text-[#49b2ed] text-[19px] text-center mt-3 font-bold"><?php echo $item['title']; ?></div>
             </a>
           <?php endforeach; ?>
@@ -50,39 +56,30 @@ $industries = get_post_meta($post_id, 'group_industries', true);
     <section class="home__news ">
       <div class="block-content">
         <div class=" mt-8 mb-8 border-b-[1px] pb-8 border-[#ccc]">
-          <div class="border-solid border-b-2 border-[#49b2ed]">
+          <div class="border-solid border-b-2 border-[#49b2ed] mb-5">
             <span class="bg-[#49b2ed] text-white px-3 pt-2 pb-1 uppercase">Tin tức - sự kiện</span>
           </div>
-          <div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 list-content gap-8">
             <?php
-            $args = array(
-              'post_type'      => 'post',
-              'posts_per_page' => 5,
-            );
-            $query = new WP_Query($args);
+            if ($query->have_posts()) :
+              while ($query->have_posts()) :
+                $query->the_post();
             ?>
-            <div class="flex flex-col list-content">
+                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                  <header class="entry-header flex flex-col items-center h-full">
+                    <div class="featured-image w-full">
+                      <?php the_post_thumbnail('custom-size'); ?>
+                    </div>
+                    <h2 class="entry-title mt-2 font-[700] text-base uppercase"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                  </header><!-- .entry-header -->
+                </article>
               <?php
-              if ($query->have_posts()) :
-                while ($query->have_posts()) :
-                  $query->the_post();
+              endwhile;
+              wp_reset_postdata();
+            else :
               ?>
-                  <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                    <header class="entry-header">
-                      <div class="featured-image">
-                        <?php the_post_thumbnail('small'); ?>
-                      </div>
-                      <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                    </header><!-- .entry-header -->
-                  </article>
-                <?php
-                endwhile;
-                wp_reset_postdata();
-              else :
-                ?>
-                <p><?php _e('No posts found.'); ?></p>
-              <?php endif; ?>
-            </div>
+              <p><?php _e('No posts found.'); ?></p>
+            <?php endif; ?>
           </div>
         </div>
       </div>
