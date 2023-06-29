@@ -7,8 +7,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <?php wp_head(); ?>
-
 <body <?php body_class(); ?>>
+  <?php
+  $options            = get_option('banner_settings');
+  $field_image        = 'banner_image';
+  $field_hyperlink    = 'banner_hyperlink';
+
+  $url_img    = $options[$field_image];
+  $hyperlink  = $options[$field_hyperlink];
+
+  ?>
+  <section class="global-banner" style="background-color: #1e72be">
+    <div class="block-content">
+      <a href="<?php echo $hyperlink; ?>"> <img src=<?php echo $url_img; ?>></a>
+    </div>
+  </section>
+
   <header>
     <div class="nav-bar-menu">
       <?php

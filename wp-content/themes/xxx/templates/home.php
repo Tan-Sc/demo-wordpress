@@ -71,7 +71,9 @@ $query = new WP_Query($args);
                       <?php the_post_thumbnail('custom-size'); ?>
                     </div>
                     <h2 class="entry-title mt-2 font-[700] text-base uppercase"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                  </header><!-- .entry-header -->
+                    <?php echo get_the_date(); ?>
+                    <?php echo the_excerpt(); ?>
+                  </header>
                 </article>
               <?php
               endwhile;

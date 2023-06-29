@@ -15,11 +15,11 @@ function add_body_class($classes)
 
 <?php
 include 'carousel.php';
-
-global $post;
-$post_id    = $post->ID;
-$industries = get_post_meta($post_id, 'group_industries', true);
-
+$args = array(
+  'post_type'      => 'post',
+  'posts_per_page' => 6,
+);
+$query = new WP_Query($args);
 ?>
 <section class="carousel">
   <?php echo get_section_carousel(); ?>
@@ -29,14 +29,36 @@ $industries = get_post_meta($post_id, 'group_industries', true);
     <div class="title font-bold text-2xl uppercase text-center my-9 text-red-500">
       <span> <?php echo get_the_title(); ?></span>
     </div>
-    <div class=" row grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
-      <?php foreach ($industries as $item) : ?>
-        <div class="flex flex-col items-center max-w-[400px]">
-          <img class="img" src=<?php echo $item['img']; ?>>
-          <div class="title text-[#49b2ed] text-[19px] text-center mt-3 font-bold"><?php echo $item['title']; ?></div>
+    <section class="home__news ">
+      <div class="block-content">
+        <div class=" mt-8 mb-8 border-b-[1px] pb-8 border-[#ccc]">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 list-content gap-8">
+            <?php
+            if ($query->have_posts()) :
+              while ($query->have_posts()) :
+                $query->the_post();
+            ?>
+                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                  <header class="entry-header flex flex-col items-center h-full">
+                    <div class="featured-image w-full">
+                      <?php the_post_thumbnail('custom-size'); ?>
+                    </div>
+                    <h2 class="entry-title mt-2 font-[700] text-base uppercase"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                    <?php echo get_the_date(); ?>
+                    <?php echo the_excerpt(); ?>
+                  </header>
+                </article>
+              <?php
+              endwhile;
+              wp_reset_postdata();
+            else :
+              ?>
+              <p><?php _e('No posts found.'); ?></p>
+            <?php endif; ?>
+          </div>
         </div>
-      <?php endforeach; ?>
-    </div>
+      </div>
+    </section>
   </div>
 </section>
 
