@@ -66,13 +66,17 @@ $query = new WP_Query($args);
                 $query->the_post();
             ?>
                 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                  <header class="entry-header flex flex-col items-center h-full">
+                  <header class="entry-header flex flex-col h-full">
                     <div class="featured-image w-full">
                       <?php the_post_thumbnail('custom-size'); ?>
                     </div>
-                    <h2 class="entry-title mt-2 font-[700] text-base uppercase"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                    <?php echo get_the_date(); ?>
-                    <?php echo the_excerpt(); ?>
+                    <h2 class="entry-title mt-2 font-[700] text-base uppercase title-news"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                    <div class="desc-content">
+                      <?php echo the_excerpt(); ?>
+                    </div>
+                    <div class="date-post">
+                      <?php echo get_the_date(); ?>
+                    </div>
                   </header>
                 </article>
               <?php

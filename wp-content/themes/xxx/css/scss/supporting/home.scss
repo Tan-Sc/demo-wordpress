@@ -31,6 +31,14 @@
           width: 100%;
         }
       }
+      .title-news {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        height: 48px;
+        overflow: hidden;
+        margin-bottom: 8px;
+      }
     }
   }
 

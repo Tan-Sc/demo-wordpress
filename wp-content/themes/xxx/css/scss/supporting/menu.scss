@@ -9,13 +9,48 @@
 
     li {
       padding: 8px 16px;
+      position: relative;
       a {
         color: white;
         text-transform: uppercase;
       }
     }
+
+    li:hover {
+      .sub-menu {
+        display: block;
+      }
+    }
     li.current_page_item {
       border-bottom: 3px solid #49b2ed;
+    }
+
+    // .menu-item-has-children {
+    //   position: relative;
+    // }
+
+    // .menu-item-has-children {
+    //   ::after {
+    //     content: "";
+    //     position: absolute;
+    //   }
+    // }
+
+    .sub-menu {
+      display: none;
+      position: absolute;
+      z-index: 10;
+      background: #fff;
+      box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+      top: 40px;
+      left: 0;
+      li {
+        a {
+          text-transform: inherit;
+          font-size: 12px;
+          color: black;
+        }
+      }
     }
   }
 }

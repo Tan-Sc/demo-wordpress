@@ -3,21 +3,17 @@
 .slick-next {
   font-size: 0;
   line-height: 0;
-
   position: absolute;
   top: 50%;
-
+  z-index: 10;
   display: block;
-
   width: 20px;
   height: 20px;
   padding: 0;
   -webkit-transform: translate(0, -50%);
   -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
-
   cursor: pointer;
-
   color: transparent;
   border: none;
   outline: none;
@@ -77,7 +73,7 @@
   left: -25px;
 }
 .slick-next:before {
-  content: "→";
+  content: "\e82d";
 }
 [dir="rtl"] .slick-next:before {
   content: "←";

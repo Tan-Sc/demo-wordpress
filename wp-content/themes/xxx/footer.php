@@ -2,8 +2,8 @@
 $menuItems = [
   'Trang Chủ' => 'index.php',
   'Giới thiệu' => 'about.php',
-  'Lĩnh Vực Hoạt Động' => 'services.php',
-  'Tin tức' => 'contact.php',
+  'Lĩnh Vực Hoạt Động' => 'page-industry.php',
+  'Tin tức' => 'page-news.php',
   'Tuyển dụng' => 'contact.php',
   'Liên hệ' => 'contact.php'
 ];
@@ -14,7 +14,7 @@ $menuHTML = array_map(function ($title, $url) {
 
 <footer>
   <div class="bg-[#02336b] pt-14 pb-5 text-white">
-    <div class="block-content grid grid-cols-1 md:grid-cols-2  gap-12 lg:grid-cols-3">
+    <div class="block-content grid grid-cols-1 md:grid-cols-2  gap-14 lg:grid-cols-3">
       <div>
         <div class="uppercase text-[15px] mb-8">
           TRUNG TÂM KIỂM ĐỊNH KỸ THUẬT AN TOÀN KHU VỰC I
