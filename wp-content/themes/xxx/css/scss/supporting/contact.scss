@@ -1,0 +1,29 @@
+.contact {
+  .content-contact {
+    h2 {
+      font-size: 24px;
+    }
+  }
+  .service {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      input,
+      textarea {
+        font-size: 12px;
+        line-height: 21px;
+        color: #444;
+        border: 1px solid #e1e1e1;
+        width: 100%;
+        max-width: 100%;
+        padding: 4px 12px;
+        outline: none;
+      }
+    }
+  }
+}
