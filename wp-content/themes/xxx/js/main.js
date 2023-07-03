@@ -1,16 +1,8 @@
-window.onscroll = function () {
-  scrollFunction();
-};
+document.querySelector(".menu-icon").addEventListener("click", function () {
+  console.log("clicked");
+  document.querySelector(".nav-bar-menu").classList.add("open");
+});
 
-function scrollFunction() {
-  var menu = document.getElementById("navbar");
-
-  const scroll = window.scrollY;
-  console.log(scroll);
-
-  if (window.scrollY > 90) {
-    menu.classList.add("scroll-menu");
-  } else {
-    menu.classList.remove("scroll-menu");
-  }
-}
+document.querySelector(".close-icon").addEventListener("click", function () {
+  document.querySelector(".nav-bar-menu").classList.remove("open");
+});

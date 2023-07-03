@@ -512,6 +512,9 @@ video {
 .fixed {
   position: fixed;
 }
+.sticky {
+  position: sticky;
+}
 .bottom-12 {
   bottom: 3rem;
 }
@@ -526,6 +529,12 @@ video {
 }
 .left-12 {
   left: 3rem;
+}
+.top-0 {
+  top: 0px;
+}
+.z-10 {
+  z-index: 10;
 }
 .my-9 {
   margin-top: 2.25rem;
@@ -672,6 +681,10 @@ video {
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+.px-\[15px\] {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .pb-1 {
   padding-bottom: 0.25rem;

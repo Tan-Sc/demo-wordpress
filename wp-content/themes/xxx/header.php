@@ -25,8 +25,12 @@
     </div>
   </section>
 
-  <header>
+  <header class="sticky top-0 z-10">
     <div class="nav-bar-menu" id="navbar">
+      <div class="px-[15px] py-2 icon-responsive">
+        <div class="menu-icon">&#9776;</div>
+        <div class="close-icon">&times;</div>
+      </div>
       <?php
       wp_nav_menu(array(
         'echo'      => true,
