@@ -25,7 +25,7 @@
     </div>
   </section>
 
-  <header class="sticky top-0 z-10">
+  <header class="sticky top-0 z-30">
     <div class="nav-bar-menu" id="navbar">
       <div class="px-[15px] py-2 icon-responsive">
         <div class="menu-icon">&#9776;</div>
