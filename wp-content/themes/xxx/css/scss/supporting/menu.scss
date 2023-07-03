@@ -1,6 +1,7 @@
 // Menu
 .nav-bar-menu {
   background: #04448d;
+  width: 100%;
   .menu {
     display: flex;
     flex-direction: row;
@@ -54,4 +55,12 @@
       }
     }
   }
+}
+
+.nav-bar-menu.scroll-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
 }
