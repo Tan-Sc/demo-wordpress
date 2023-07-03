@@ -11,9 +11,9 @@ $menuHTML = array_map(function ($title, $url) {
   return "<li><a href='$url' class='text-white text-[14px] leading-4 hover:text-[#676e6f]'>$title</a></li>";
 }, array_keys($menuItems), $menuItems);
 
-global $post;
-$post_id  = $post->ID;
-$phone    = get_post_meta($post_id, 'hotline', true);
+$options       = get_option('banner_settings');
+$field_phone   = 'phone_hotline';
+$phone         = $options[$field_phone];
 
 ?>
 
@@ -34,6 +34,7 @@ echo '<script>
         });
     </script>';
 ?>
+
 <button id="scrollBtn" class="flex items-center justify-center fixed bottom-12 right-12 w-12 h-12 text-black bg-[#33dfd6] rounded-full scroll-to-top">
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chevron-double-up" viewBox="0 0 16 16">
     <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z" />

@@ -33,21 +33,3 @@ function logo_carousel()
 		'type'  => 'text',
 	));
 }
-
-
-add_action('cmb2_admin_init', 'hotline');
-
-function hotline()
-{
-	$cmb = new_cmb2_box(array(
-		'id'            => 'hotline',
-		'title'         => 'Hotline Number Phone',
-		'object_types'  => array('page'),
-	));
-
-	$cmb->add_field(array(
-		'name'	=> 'Number',
-		'id'	=> 'hotline',
-		'type'  => 'text',
-	));
-}
