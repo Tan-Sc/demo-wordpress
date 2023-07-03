@@ -12,6 +12,8 @@ function add_body_class($classes)
 }
 get_header();
 ?>
-<h1>adad</h1>
+<div>
+  <?php the_content(); ?>
+</div>
 <?php
 get_footer();

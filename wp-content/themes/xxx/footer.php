@@ -42,11 +42,11 @@ echo '<script>
   </svg>
 </button>
 <footer>
-  <div class="bg-[#02336b] pt-14 pb-10 text-white">
+  <div class="bg-[#02336b] pt-14 pb-16 text-white">
     <div class="block-content grid grid-cols-1 md:grid-cols-2  gap-14 lg:grid-cols-3">
       <div>
         <div class="uppercase text-[15px] mb-8">
-          TRUNG TÂM KIỂM ĐỊNH KỸ THUẬT AN TOÀN KHU VỰC I
+          CÔNG TY CỔ PHẦN HUẤN LUYỆN VÀ KIỂM ĐỊNH AN TOÀN THIẾT BỊ CÔNG NGHIỆP MIỀN NAM
         </div>
         <div>
           <?php echo "<ul class='flex flex-col gap-3 '>" . implode('', $menuHTML) . "</ul>";  ?>
@@ -54,78 +54,18 @@ echo '<script>
       </div>
       <div>
         <div class="uppercase text-[15px] mb-8">Trụ sở chính</div>
-        <div>
+        <div class="flex flex-col gap-2">
+          <p>Mã số thuế: 3603903293</p>
           <p>
-            Địa chỉ:
-            <strong>
-              Tầng 19 tòa nhà VTC Online, số 18 Tam Trinh, Phường Minh Khai,
-              Quận Hai Bà Trưng, Hà Nội
-            </strong>
+            Địa chỉ: E22 Đường D2, Khu Phố 2, Phường Bửu Long, Thành phố Biên Hoà, Tỉnh Đồng Nai.
           </p>
-          <p>Tel: (+84) 39438049</p>
-          <p>Fax: (+84) 38225401</p>
-          <p>MST: 0100110341</p>
+          <p>Số tài khoản: 379888686 tại Ngân hàng TMCP Quân đội (MBBank) - Chi nhánh Tân Cảng.</p>
+          <p>Điện thoại: (0251)395.3186</p>
+          <p>Website: miennamkiemdinh.com </p>
         </div>
       </div>
       <div>
-        <div class="uppercase text-[15px] mb-8">
-          TỔ KIỂM ĐỊNH TP HỒ CHÍ MINH
-        </div>
-        <div>
-          <p>
-            Địa chỉ: A75/6B/46 Bạch Đằng, Phường 2, Quận Tân Bình, TP Hồ Chí
-            Minh
-          </p>
-          <p>Tổ trưởng: Ông Nguyễn Đức Hiếu</p>
-          <p>Mobile: 0988 366 615</p>
-          <p>ĐT/Fax: 086 296 3981</p>
-        </div>
-      </div>
-      <div>
-        <div class="uppercase text-[15px] mb-8">
-          TỔ KIỂM ĐỊNH KHU VỰC MIỀN TRUNG
-        </div>
-        <div>
-          <div>
-            <p>
-              Địa chỉ: số 469 đường Trường Chinh, phường An Khê, quận Thanh
-              Khê, thành phố Đà Nẵng
-            </p>
-            <p>Tổ trưởng: Ông Nguyễn Việt Anh</p>
-            <p>Mobile: 0903 205 595</p>
-            <p>Email: vietanhkd1@gmail.com</p>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="uppercase text-[15px] mb-8">
-          VĂN PHÒNG ĐẠI DIỆN TẠI LÀO CAI
-        </div>
-        <div>
-          <div>
-            <p>
-              Địa chỉ: Số 311 đường Hoàng Quốc Việt, Tổ 3, phường Bắc Lệnh,
-              TP Lào Cai, Tỉnh Lào Cai.
-            </p>
-            <p>Trưởng đại diện: Ông Lê Việt Cường</p>
-            <p>Mobile: 0912 292 097</p>
-            <p>Mail: lecuong1102@gmail.com</p>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="uppercase text-[15px] mb-8">
-          TRẠM KIỂM ĐỊNH CHAI ÁP LỰC HẢI PHÒNG
-        </div>
-        <div>
-          <div>
-            <p>Địa chỉ: KCN Cành Hầu, Quán Trữ, Kiến An, Hải Phòng</p>
-            <p>Trưởng trạm: Ông Trần Ngọc Trung</p>
-            <p>Mobile: 0912 665 253</p>
-            <p>ĐT/Fax: 0313 576 005</p>
-            <p>Mail: trungkd1.hp@gmail.com</p>
-          </div>
-        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.068145510029!2d106.79900767588187!3d10.958225089201884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174dba3d2ee710d%3A0xd21db6c37af9219c!2zQ8OUTkcgVFkgQ1AgSFXhuqROIExVWeG7hk4gVsOAIEtJ4buCTSDEkOG7ik5IIEFOIFRPw4BOIFRISeG6vlQgQuG7iiBDw5RORyBOR0hJ4buGUCBNSeG7gE4gTkFN!5e0!3m2!1sen!2s!4v1688399528578!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </div>
