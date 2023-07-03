@@ -10,6 +10,11 @@ $menuItems = [
 $menuHTML = array_map(function ($title, $url) {
   return "<li><a href='$url' class='text-white text-[14px] leading-4 hover:text-[#676e6f]'>$title</a></li>";
 }, array_keys($menuItems), $menuItems);
+
+global $post;
+$post_id  = $post->ID;
+$phone    = get_post_meta($post_id, 'hotline', true);
+
 ?>
 
 <?php
