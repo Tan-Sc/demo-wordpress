@@ -45,7 +45,7 @@
                 <?php endif; ?>
                 <div class="entry-content">
                   <?php the_excerpt(); ?>
-                  <a href="<?php the_permalink(); ?>" class="read-more">Read More</a>
+                  <a href="<?php the_permalink(); ?>" class="read-more">Xem thêm</a>
                 </div>
               </div>
             </article>
