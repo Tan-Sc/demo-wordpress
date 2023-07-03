@@ -131,7 +131,7 @@ echo '<script>
   </div>
   <div class="bg-[#022146] fixed bottom-0 w-full">
     <div class="block-content">
-      <span class="text-white flex items-center py-2 text-[14px] leading-4">
+      <span class="flex items-center py-4 text-xl uppercase text-white leading-4">
         <a href="tel:<?php echo $phone; ?>" id="hotline">
           Hotline: <?php echo $phone; ?>
         </a>
