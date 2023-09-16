@@ -19,7 +19,7 @@
   $hyperlink  = $options[$field_hyperlink];
 
   ?>
-  <section class="global-banner" style="background-color: #1e72be">
+  <section class="global-banner">
     <div class="block-content">
       <a href="<?php echo $hyperlink; ?>"> <img src=<?php echo $url_img; ?>></a>
     </div>

@@ -7,6 +7,8 @@ $menuItems = [
   'Tuyển dụng' => 'contact.php',
   'Liên hệ' => 'contact.php'
 ];
+
+echo (log($menus));
 $menuHTML = array_map(function ($title, $url) {
   return "<li><a href='$url' class='text-white text-[14px] leading-4 hover:text-[#676e6f]'>$title</a></li>";
 }, array_keys($menuItems), $menuItems);
@@ -69,9 +71,9 @@ echo '<script>
       </div>
     </div>
   </div>
-  <div class="bg-[#022146] fixed bottom-0 w-full">
+  <div class="bg-[#04448d] fixed bottom-0 w-full">
     <div class="block-content">
-      <span class="flex items-center py-4 text-xl uppercase text-white leading-4">
+      <span class="flex items-center py-[13.5px] text-xl uppercase text-white leading-4">
         <a href="tel:<?php echo $phone; ?>" id="hotline">
           Hotline: <?php echo $phone; ?>
         </a>
