@@ -1,11 +1,9 @@
 <?php
 $menuItems = [
-  'Trang Chủ' => 'index.php',
-  'Giới thiệu' => 'about.php',
-  'Lĩnh Vực Hoạt Động' => 'page-industry.php',
-  'Tin tức' => 'page-news.php',
-  'Tuyển dụng' => 'contact.php',
-  'Liên hệ' => 'contact.php'
+  'Trang Chủ' => '/',
+  'Lĩnh Vực Hoạt Động' => '/linh-vuc-hoat-dong/',
+  'Tin tức' => '/tin-tuc/',
+  'Liên hệ' => '/lien-he/'
 ];
 
 echo (log($menus));
