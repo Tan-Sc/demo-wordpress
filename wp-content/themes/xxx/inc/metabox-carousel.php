@@ -8,6 +8,7 @@ function img_carousel()
 		'id'            => 'img_carousel',
 		'title'         => 'IMG Carousel',
 		'object_types'  => array('page'),
+		'show_on' => array('key' => 'page-template', 'value' => 'templates/home.php')
 	));
 
 	$group = $cmb->add_field(array(

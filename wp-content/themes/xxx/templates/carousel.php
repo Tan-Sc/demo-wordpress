@@ -3,7 +3,7 @@ function get_section_carousel()
 {
   ob_start();
 
-  $array_media = get_post_meta(get_the_ID(), 'group_img_carousel', true);
+  $array_media = get_post_meta(get_option('page_on_front'), 'group_img_carousel', true);
 
 ?>
   <section class="row global-section">
