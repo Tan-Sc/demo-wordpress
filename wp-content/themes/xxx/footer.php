@@ -6,7 +6,6 @@ $menuItems = [
   'Liên hệ' => '/lien-he/'
 ];
 
-echo (log($menus));
 $menuHTML = array_map(function ($title, $url) {
   return "<li><a href='$url' class='text-white text-[14px] leading-4 hover:text-[#676e6f]'>$title</a></li>";
 }, array_keys($menuItems), $menuItems);

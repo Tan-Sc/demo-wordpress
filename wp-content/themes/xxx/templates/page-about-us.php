@@ -12,7 +12,10 @@ function add_body_class($classes)
 }
 get_header();
 ?>
-<div>
+<div class="block-content">
+  <div class="title font-bold text-2xl uppercase text-center my-9 text-red-500">
+    <span> <?php echo get_the_title(); ?></span>
+  </div>
   <?php the_content(); ?>
 </div>
 <?php
