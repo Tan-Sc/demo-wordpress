@@ -741,6 +741,9 @@ video {
 .leading-4 {
   line-height: 1rem;
 }
+.leading-8 {
+  line-height: 2rem;
+}
 .leading-\[1\.3\] {
   line-height: 1.3;
 }

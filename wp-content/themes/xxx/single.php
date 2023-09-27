@@ -19,31 +19,8 @@
                 <header class="entry-header">
                   <h1 class="entry-title"><?php the_title(); ?></h1>
                 </header>
-
-                <?php if (has_post_thumbnail()) : ?>
-                  <div class="featured-image">
-                    <?php the_post_thumbnail('large'); ?>
-                  </div>
-                <?php endif; ?>
-
-                <div class="entry-content">
+                <div class="entry-content leading-8">
                   <?php the_content(); ?>
-                </div>
-
-                <div class="social-sharing">
-                  <h3>Share this post:</h3>
-                  <ul class="social-icons">
-                    <li>
-                      <a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank" rel="nofollow">
-                        <i class="fab fa-facebook"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://twitter.com/intent/tweet?url=<?php the_permalink(); ?>&text=<?php the_title(); ?>" target="_blank" rel="nofollow">
-                        <i class="fab fa-twitter"></i>
-                      </a>
-                    </li>
-                  </ul>
                 </div>
               </article><!-- #post-<?php the_ID(); ?> -->
             </div>

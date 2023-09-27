@@ -55,7 +55,7 @@
           wp_reset_postdata();
         else :
           ?>
-          <p><?php _e('No posts found.'); ?></p>
+          <p><?php _e('Không có bài đăng.'); ?></p>
         <?php endif; ?>
       </div>
 
@@ -92,7 +92,7 @@
           wp_reset_postdata();
         else :
           ?>
-          <p><?php _e('No posts found.'); ?></p>
+          <p><?php _e('Không có bài đăng.'); ?></p>
         <?php endif; ?>
       </div>
     </div>

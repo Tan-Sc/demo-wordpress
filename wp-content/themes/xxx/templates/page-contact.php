@@ -18,8 +18,8 @@ function add_body_class($classes)
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.068145510029!2d106.79900767588187!3d10.958225089201884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174dba3d2ee710d%3A0xd21db6c37af9219c!2zQ8OUTkcgVFkgQ1AgSFXhuqROIExVWeG7hk4gVsOAIEtJ4buCTSDEkOG7ik5IIEFOIFRPw4BOIFRISeG6vlQgQuG7iiBDw5RORyBOR0hJ4buGUCBNSeG7gE4gTkFN!5e0!3m2!1sen!2s!4v1688399528578!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
   <div class="block-content">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-8 border-b-[1px] pb-8 border-[#ccc]">
-      <div class="content-contact">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 pb-8 border-[#ccc]">
+      <div class="content-contact leading-8">
         <?php the_content(); ?>
       </div>
       <div class="service">

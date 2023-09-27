@@ -16,7 +16,9 @@ get_header();
   <div class="title font-bold text-2xl uppercase text-center my-9 text-red-500">
     <span> <?php echo get_the_title(); ?></span>
   </div>
-  <?php the_content(); ?>
+  <div class="pb-8 leading-8">
+    <?php the_content(); ?>
+  </div>
 </div>
 <?php
 get_footer();
