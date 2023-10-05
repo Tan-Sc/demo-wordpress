@@ -44,12 +44,6 @@ $query = new WP_Query($args);
                       <?php the_post_thumbnail('custom-size'); ?>
                     </div>
                     <h2 class="entry-title mt-2 font-[700] text-base uppercase title-news"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                    <div class="desc-content">
-                      <?php echo the_excerpt(); ?>
-                    </div>
-                    <div class="date-post">
-                      <?php echo get_the_date(); ?>
-                    </div>
                   </header>
                 </article>
               <?php

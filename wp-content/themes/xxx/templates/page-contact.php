@@ -30,7 +30,7 @@ function add_body_class($classes)
           <input type="text" name="name" value="" size="40" aria-invalid="false" placeholder="Họ Tên*" />
           <input type="text" name="email" value="" size="40" aria-invalid="false" placeholder="Email*" />
           <input type="text" name="title" value="" size="40" aria-invalid="false" placeholder="Tiêu đề" />
-          <input type="text" name="phone" value="" maxlength="15"  aria-invalid="false" placeholder="Số điện thoại" />
+          <input type="text" name="phone" value="" maxlength="15" aria-invalid="false" placeholder="Số điện thoại" />
           <textarea name="content" value="" aria-invalid="false" placeholder="Nội dung" rows="4" cols="50"></textarea>
           <button type="summit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
             Gửi đi
@@ -43,34 +43,34 @@ function add_body_class($classes)
 
 <script>
   $(document).ready(function() {
-        const form = $('#form-contact');
-        const name = $('#form-contact [name="name"]');
-        const email = $('#form-contact [name="email"]');
-        const title = $('#form-contact [name="title"]');
-        const phone= $('#form-contact [name="phone"]');
-        const content = $('#form-contact [name="content"]');
-        const input = $('#form-contact input');
-        const textarea = $('#form-contact textarea');
+    const form = $('#form-contact');
+    const name = $('#form-contact [name="name"]');
+    const email = $('#form-contact [name="email"]');
+    const title = $('#form-contact [name="title"]');
+    const phone = $('#form-contact [name="phone"]');
+    const content = $('#form-contact [name="content"]');
+    const input = $('#form-contact input');
+    const textarea = $('#form-contact textarea');
 
-        form.submit(function(e) {
-          e.preventDefault();
-            $.ajax({
-              type: 'post',
-              dataType: 'json',
-              url: '<?php echo admin_url('admin-ajax.php'); ?>',
-              data: {
-                action: 'request_contact',
-                postId: '<?php echo get_the_ID(); ?>',
-                name: name.val(),
-                email: email.val(),
-                title: title.val(),
-                phone: phone.val(),
-                content: content.val(),
-              }
-            });
-            form[0].reset();
-        });
+    form.submit(function(e) {
+      e.preventDefault();
+      $.ajax({
+        type: 'post',
+        dataType: 'json',
+        url: '<?php echo admin_url('admin-ajax.php'); ?>',
+        data: {
+          action: 'request_contact',
+          postId: '<?php echo get_the_ID(); ?>',
+          name: name.val(),
+          email: email.val(),
+          title: title.val(),
+          phone: phone.val(),
+          content: content.val(),
+        }
       });
+      form[0].reset();
+    });
+  });
 </script>
 
 <?php
