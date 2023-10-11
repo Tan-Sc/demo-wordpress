@@ -52,3 +52,10 @@
     }
   }
 }
+
+@media (min-width: 1024px) {
+  .grid-cols-auto {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    justify-items: center;
+  }
+}

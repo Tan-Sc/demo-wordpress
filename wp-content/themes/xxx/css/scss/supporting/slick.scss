@@ -160,3 +160,9 @@
   opacity: 0.75;
   color: black;
 }
+
+@media screen and (max-width: 1024px) {
+  .carousel {
+    display: none;
+  }
+}

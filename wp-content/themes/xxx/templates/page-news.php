@@ -39,12 +39,14 @@ $query = new WP_Query($args);
                 $query->the_post();
             ?>
                 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                  <header class="entry-header flex flex-col h-full">
-                    <div class="featured-image w-full">
-                      <?php the_post_thumbnail('custom-size'); ?>
-                    </div>
-                    <h2 class="entry-title mt-2 font-[700] text-base uppercase title-news"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                  </header>
+                  <a href="<?php the_permalink(); ?>">
+                    <header class="entry-header flex flex-col h-full">
+                      <div class="featured-image w-full">
+                        <?php the_post_thumbnail('custom-size'); ?>
+                      </div>
+                      <h2 class="entry-title mt-2 font-[700] text-base uppercase title-news text-center"><?php the_title(); ?></h2>
+                    </header>
+                  </a>
                 </article>
               <?php
               endwhile;

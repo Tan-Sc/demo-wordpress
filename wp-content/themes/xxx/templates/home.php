@@ -40,7 +40,7 @@ $query = new WP_Query($args);
     <section class="content-section mb-10">
       <div class="block-content ">
         <h2 class="font-bold text-2xl uppercase text-center my-9 text-[#1e73be]">Lĩnh Vực Hoạt Động</h2>
-        <div class="row grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 justify-center">
+        <div class="row grid grid-cols-1 sm:grid-cols-2 grid-cols-auto gap-5 justify-center">
           <?php foreach ($industries as $item) : ?>
             <a href=<?php echo $item['link']; ?> class="flex flex-col items-center gap-10">
               <img class="img max-w-[400px] w-full" src=<?php echo $item['img']; ?>>
@@ -66,18 +66,14 @@ $query = new WP_Query($args);
                 $query->the_post();
             ?>
                 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                  <header class="entry-header flex flex-col h-full">
-                    <div class="featured-image w-full">
-                      <?php the_post_thumbnail('custom-size'); ?>
-                    </div>
-                    <h2 class="entry-title mt-2 font-[700] text-base uppercase title-news"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                    <div class="desc-content">
-                      <?php echo the_excerpt(); ?>
-                    </div>
-                    <div class="date-post">
-                      <?php echo get_the_date(); ?>
-                    </div>
-                  </header>
+                  <a href="<?php the_permalink(); ?>">
+                    <header class="entry-header flex flex-col h-full">
+                      <div class="featured-image w-full">
+                        <?php the_post_thumbnail('custom-size'); ?>
+                      </div>
+                      <h2 class="entry-title mt-2 font-[700] text-base uppercase title-news text-center"><?php the_title(); ?></h2>
+                    </header>
+                  </a>
                 </article>
               <?php
               endwhile;

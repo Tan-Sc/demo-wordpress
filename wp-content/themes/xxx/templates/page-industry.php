@@ -29,7 +29,7 @@ $industries = get_post_meta($post_id, 'group_industries', true);
     <div class="title font-bold text-2xl uppercase text-center my-9 text-red-500">
       <span> <?php echo get_the_title(); ?></span>
     </div>
-    <div class=" row grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
+    <div class=" row grid grid-cols-1 sm:grid-cols-2 grid-cols-auto gap-5 mb-10">
       <?php foreach ($industries as $item) : ?>
         <div class="flex flex-col items-center">
           <img class="img" src=<?php echo $item['img']; ?>>
