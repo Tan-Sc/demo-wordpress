@@ -536,9 +536,16 @@ video {
 .z-30 {
   z-index: 30;
 }
+.m-0 {
+  margin: 0px;
+}
 .my-9 {
   margin-top: 2.25rem;
   margin-bottom: 2.25rem;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
 .mb-10 {
   margin-bottom: 2.5rem;
@@ -599,6 +606,9 @@ video {
 }
 .w-full {
   width: 100%;
+}
+.w-\[90\%\] {
+  width: 90%;
 }
 .max-w-\[400px\] {
   max-width: 400px;
@@ -688,6 +698,17 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(59 130 246 / var(--tw-bg-opacity));
 }
+.bg-green-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
+}
+.bg-violet-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(139 92 246 / var(--tw-bg-opacity));
+}
+.p-5 {
+  padding: 1.25rem;
+}
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -750,6 +771,17 @@ video {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+.text-\[60px\] {
+  font-size: 60px;
+}
 .font-\[700\] {
   font-weight: 700;
 }
@@ -788,6 +820,12 @@ video {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+.text-\[green-500\] {
+  color: green-500;
+}
+.text-\[violet-500\] {
+  color: violet-500;
+}
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
@@ -800,6 +838,10 @@ video {
   color: rgb(103 110 111 / var(--tw-text-opacity));
 }
 @media (min-width: 640px) {
+
+  .sm\:block {
+    display: block;
+  }
 
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -821,11 +863,23 @@ video {
 }
 @media (min-width: 1024px) {
 
+  .lg\:block {
+    display: block;
+  }
+
+  .lg\:flex {
+    display: flex;
+  }
+
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:flex-row {
+    flex-direction: row;
   }
 }

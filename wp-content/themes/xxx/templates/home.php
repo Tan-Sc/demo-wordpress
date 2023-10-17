@@ -53,7 +53,7 @@ $query = new WP_Query($args);
     <section class="home__banner-content-2">
       <div class="block-content home__banner-content-2--container"></div>
     </section>
-    <section class="home__news ">
+    <section class="home__news hidden sm:block">
       <div class="block-content">
         <div class=" mt-8 mb-8 border-b-[1px] pb-8 border-[#ccc]">
           <div class="border-solid border-b-2 border-[#49b2ed] mb-5">
